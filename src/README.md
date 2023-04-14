@@ -1,4 +1,4 @@
-# Ecommerce Asia
+# Versions
 - python 3.11
 - django 4.1.7 (ORM)
 - postgres2
@@ -16,7 +16,7 @@ $ sudo -u postgres psql
 - pass: 2525_ap
 - CREATE DATABASE ecommerce WITH OWNER test;
 
-## Make Migrations
+## make Migrations
 - path => /src/
 - $ python3 manage.py makemigrations db
 - $ python3 manage.py migrate db
@@ -25,11 +25,6 @@ $ sudo -u postgres psql
 path => /src/
 $ gunicorn -w 4 -k uvicorn.workers.UvicornWorker api:app --reload
 
-## endpoints
-* POST: http://127.0.0.1:8000/users
-* GET: http://127.0.0.1:8000/firstuser
-* GET: http://127.0.0.1:8000/allusers
-
 ## documentation
 * http://127.0.0.1:8000/doc
 
@@ -37,6 +32,14 @@ $ gunicorn -w 4 -k uvicorn.workers.UvicornWorker api:app --reload
 * https://github.com/0x0is1/lowy-index-api-docs
 * https://power.lowyinstitute.org/countries.json
 
-* http://127.0.0.1:8000/users/1/countries
-* http://127.0.0.1:8000/countries
+## endpoints
+* POST: http://127.0.0.1:8000/users
+* GET: http://127.0.0.1:8000/firstuser
+* GET: http://127.0.0.1:8000/allusers
+* GET: http://127.0.0.1:8000/users/1/countries
+* GET: http://127.0.0.1:8000/countries
+
+## test
+* path => /src/
+* $ pytest
 
